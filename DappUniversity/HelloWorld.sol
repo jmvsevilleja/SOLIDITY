@@ -9,15 +9,18 @@ pragma solidity >=0.7.0 <0.9.0;
 contract HelloWorld {
     string private message = "Hello World!!!";
     string public name;
-    
-    constructor(string memory _msg)  {
+
+    // initial message passed using constructor
+    constructor(string memory _msg) {
         message = _msg;
     }
-    
-    function getMessage() public view returns(string memory){
-        return message; 
+
+    // getter function
+    function getMessage() public view returns (string memory) {
+        return message;
     }
-    
+
+    // setter function
     function setMessage(string memory _message) public {
         message = _message;
     }
