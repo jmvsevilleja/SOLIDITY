@@ -8,7 +8,7 @@ pragma solidity >=0.7.0 <0.9.0;
  */
 contract HelloWorld {
     string private message = "Hello World!!!";
-    string public name;
+    string public name = "Jess"; // public variable has view function by default
 
     // initial message passed using constructor
     constructor(string memory _msg) {

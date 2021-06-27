@@ -34,6 +34,7 @@ contract DataType {
     MyStruct public myStruct = MyStruct(1, "Hello, World!");	
 	
     // Local Variables - reuse inside the function
+    // Because they don't modify the state, view and pure functions do not have a gas cost 
     function getValue() public pure returns(uint) {
         uint value = 1;
         return value;
