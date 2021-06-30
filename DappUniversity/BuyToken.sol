@@ -24,12 +24,16 @@ contract BuyToken {
     }
     
     // fallback - function called anytime an account sends Ether to a smart contract
+    // The fallback function always receives data but to also receive Ether, you should mark it as payable
+    //  when no other function matches (not even the receive function). Optionally payable.
     fallback() external payable  {
-        buyToken();
+        // buyToken();
     }
     // receive -  function called for plain Ether transfers
+    // for empty calldata (and any value)
     receive() external payable {
         // nothing here
+        buyToken();
     }
     
     // issue a token and recieve ether
